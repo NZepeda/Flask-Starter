@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    {% if image %}
+        <div class="row">
+            <div class="col">
+                <h1>"{{image.title}}" by {{image.flickr_user}}</h1>
+                <img src="{{ url_for('static', filename=image.get_path() )}}"/>
+            </div>
+        </div>
+        <div class="row">
+            <a href="{{url_for('index')}}">Back to list of images</a>
+        </div>
+
+    {% else %}
+        <h1>An error has occured</h1>
+    {% endif %}
+</div>
+{% endblock %}
