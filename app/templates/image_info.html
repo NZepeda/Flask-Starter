@@ -10,9 +10,16 @@
             </div>
         </div>
         <div class="row">
-            <a href="{{url_for('index')}}">Back to list of images</a>
+            <div class="col">
+                    <span>{{image.get_image_info()}}</span>
+            </div>
         </div>
-
+        <div class="row">
+            <div class="col">
+                <a href="{{url_for('index')}}">Back to list of images</a>
+            </div>
+        </div>
+    
     {% else %}
         <h1>An error has occured</h1>
     {% endif %}
