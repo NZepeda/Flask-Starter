@@ -30,6 +30,7 @@ class ImageController:
         for image in self.images:
             if(image.id == id):
                 return image
+        print("Couldn't find image with id: {id}".format(id=id))
         return None
 
 

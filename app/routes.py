@@ -9,6 +9,7 @@ imageController = ImageController()
 @app.route('/index')
 def index():
 	## Reset the images every time we refresh the index page
+	print("Reseting images!")
 	imageController.reset_images()
 	return render_template('index.html', images=imageController.images)
 
