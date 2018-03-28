@@ -1,3 +1,9 @@
+## Nestor Zepeda
+## 3/26/18
+## CST 205
+
+## A controller to manage images 
+
 from image_information import image_info
 from ..models.Image import Image
 import random
@@ -11,11 +17,11 @@ class ImageController:
         self.images = self.get_images()
 
     def get_images(self):
-        image_list = []
-        index_set = set()
-
         ## Use a set to store randomly created indeces between 0 and 10 to ensure 
         ## we don't have duplicates
+        index_set = set()
+        image_list = []
+
         while len(index_set) < 3:
             
             random_index = random.randint(0, len(image_info) - 1)
@@ -30,6 +36,7 @@ class ImageController:
         for image in self.images:
             if(image.id == id):
                 return image
+                
         print("Couldn't find image with id: {id}".format(id=id))
         return None
 

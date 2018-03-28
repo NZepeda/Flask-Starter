@@ -1,3 +1,9 @@
+## Nestor Zepeda
+## 3/26/18
+## CST 205
+
+## Main routes file for the application. 
+## This is a simple app containing two distinct routes
 from app import app
 from flask import render_template
 from .controllers.ImageController import ImageController
