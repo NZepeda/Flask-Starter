@@ -33,10 +33,10 @@ class ImageController:
         return image_list
     
     def get_image_by_id(self, id):
-        for image in self.images:
-            if(image.id == id):
-                return image
-                
+        for image in image_info:
+            if(image["id"] == id):
+                return Image(image)
+
         print("Couldn't find image with id: {id}".format(id=id))
         return None
 
